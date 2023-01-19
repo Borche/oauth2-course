@@ -1,6 +1,6 @@
 # OpenID
 
-OpenID is an extenstion of OAuth2. Its purpose is to let the AS communicate user information to the client. This is done with a ID token. An ID token in OpenID is always a JWT (JSON Web Token).
+OpenID is an extenstion of OAuth2. Its purpose is to let the AS communicate user information to the client. This is done with an ID token. An ID token in OpenID is always a JWT (JSON Web Token).
 
 ## Some differences between an access token and an ID token
 - An access token should be treated as an opaque string. An application should not be able to read it. However, an ID token is meant to be read and validated by the application.
