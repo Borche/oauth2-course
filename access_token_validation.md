@@ -22,3 +22,11 @@ APIs that doesn't handle sensitive data/operations can consider the validation a
 This solution will result in far fewer of the slow remote requests to the AS. But the possibility to do them is there for those APIs that need it. 
 
 Note: In a smaller API, the middleware can act as the API gateway.
+
+## Application can revoke an access token
+If a user actively logs out, the application can send a request to the AS's `revocation` endpoint, informing the AS that the access token is no longer needed/valid.
+
+## Scopes
+Scopes are a way to limit what the _application_ can do/request within a system. Scopes in OAuth2 are strings, and they don't mean anything except to _your API_. The scope is included in the access token.
+
+It's important to distinguish between scopes in OAuth2 and scopes that users have in your system/app. OAuth2's scopes don't have anything to do with your permission system in your app. An OAuth2 scope only indicates what an application requests access to in the context of what a user can _already_ do.
